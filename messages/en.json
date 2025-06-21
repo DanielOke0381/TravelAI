@@ -1,0 +1,13 @@
+{
+    "AppHeader": {
+      "home": "Home",
+      "history": "History",
+      "profile": "Profile"
+    },
+    "LanguageSwitcher": {
+      "label": "Change language",
+      "en": "English",
+      "fr": "French",
+      "ko": "Korean"
+    }
+  }

@@ -30,6 +30,11 @@ export async function GET(req: NextRequest) {
     const sessionId = searchParams.get('sessionId');
     const user = await currentUser();
 
+    // Check if user is authenticated
+    if (!user) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     if (sessionId == 'all') {
         const result = await db.select().from(SessionChatTable)
             //@ts-ignore
